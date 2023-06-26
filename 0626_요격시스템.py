@@ -1,5 +1,3 @@
-#0626_요격시스템
-
 def solution(targets):
     targets.sort(key=lambda x: x[1])
     last_shot = -1
