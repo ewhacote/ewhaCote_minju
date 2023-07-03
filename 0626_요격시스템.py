@@ -5,5 +5,6 @@ def solution(targets):
     for target in targets:
         if target[0] > last_shot:
             answer += 1
-            last_shot = target[1] - 0.5
+            last_shot = target[1] - 0.5 
+            #굳이 0.5 안 빼고 target[0] >= last_shot 해도 됨
     return answer
