@@ -11,7 +11,7 @@ def find_intersection(l1, l2):
         return int(x), int(y)
 
 def solution(line):
-    pts = set()
+    pts = set()  
     x_pts, y_pts = set(), set()
     for a, b in combinations(line, 2):
         pt = find_intersection(a, b)
@@ -23,7 +23,7 @@ def solution(line):
     x_min, x_max = min(x_pts), max(x_pts)
     y_min, y_max = min(y_pts), max(y_pts)
 
-    ans = [['.'] * (x_max - x_min + 1) for _ in range(y_max - y_min + 1)]
+    answer = [['.'] * (x_max - x_min + 1) for _ in range(y_max - y_min + 1)]
     for x, y in pts:
-        ans[y_max - y][x - x_min] = '*'
+        answer[y_max - y][x - x_min] = '*'
     return [''.join(row) for row in ans]
